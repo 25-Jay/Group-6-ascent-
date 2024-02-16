@@ -61,3 +61,5 @@ crashlytics-build.properties
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+Ascent project/Library/PackageCache/com.unity.2d.pixel-perfect@2.0.4/Samples~/Scenes and Extras/Scenes/Presets/Pixel Perfect Cameras/PixelPerfectCamera_16PPU_320x240_Pixel Snapped.preset
+*.preset
