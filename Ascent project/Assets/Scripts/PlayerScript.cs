@@ -13,8 +13,12 @@ public class PlayerScript : MonoBehaviour
     private bool isFacingRight = true;
     [SerializeField] private Rigidbody2D rb;
 
-    public static int healthpoints;
-    public Text healthtext;
+    [SerializeField] private Animator playerAnimation;
+
+    Vector2 movement;
+
+    // public static int healthpoints;
+    //  public Text healthtext;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +29,39 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        changeDirection();
         Horizontal = Input.GetAxisRaw("Horizontal");
+        Debug.Log("Horizontal"+ Horizontal);
+
+        if(Horizontal !=0)
+        {
+            playerAnimation.SetTrigger("WalkTrigger");
+        }
+
+        else
+        {
+            playerAnimation.SetTrigger("IdleTrigger");
+        }
 
         if(Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingpower);
         }
 
-        healthtext.text = "Health: " + healthpoints;
+        // healthtext.text = "Health: " + healthpoints;
 
-        Flip();
+        if (movement.x < 0 && isFacingRight)
+        {
+
+            GetComponent<SpriteRenderer>().flipX = true;
+
+        }
+        else if (movement.x > 0 && !isFacingRight)
+        {
+
+            GetComponent<SpriteRenderer>().flipX = false;
+
+        }   
     }
 
     private void FixedUpdate()
@@ -42,14 +69,33 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(Horizontal * speed, rb.velocity.y);
     }
 
-    private void Flip()
+    /* private void Flip()
+     {
+         if(Horizontal<0)
+         {
+             Vector2 PlayerscaleX = transform.localScale;
+             PlayerscaleX.x *= -1;
+             transform.localScale = PlayerscaleX;
+         }
+
+         else
+         {
+             Vector2 PlayerscaleX = transform.localScale;
+             PlayerscaleX.x *= 1;
+             transform.localScale = PlayerscaleX;
+         }
+     }*/
+
+    //Update where the player is facing accordingly
+    void changeDirection()
     {
-        if(isFacingRight&&Horizontal<0f||!isFacingRight&&Horizontal>0f)
+        if (Input.GetAxis("Horizontal") > 0.05)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            transform.localScale = new Vector2(3, 3);
+        }
+        else if (Input.GetAxis("Horizontal") < -0.05)
+        {
+            transform.localScale = new Vector2(-3, 3);
         }
     }
 

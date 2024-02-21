@@ -360,8 +360,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91901613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.116, y: -2.02, z: 0}
-  m_LocalScale: {x: 8.851871, y: 1, z: 1}
+  m_LocalPosition: {x: 0.449, y: -2.02, z: 0}
+  m_LocalScale: {x: 9.982004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 338130041}
   m_RootOrder: 2
@@ -759,8 +759,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269179222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.418, y: 4.23, z: 0}
-  m_LocalScale: {x: 3.9511406, y: 0.41838288, z: 1}
+  m_LocalPosition: {x: 10.397, y: 4.066, z: 0}
+  m_LocalScale: {x: 5.3528533, y: 0.7469098, z: 1}
   m_Children: []
   m_Father: {fileID: 338130041}
   m_RootOrder: 6
@@ -1329,8 +1329,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553671198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.999, y: 1.19, z: 0}
-  m_LocalScale: {x: 2.7034261, y: 0.5, z: 1}
+  m_LocalPosition: {x: 1.999, y: 1.175, z: 0}
+  m_LocalScale: {x: 2.7034261, y: 0.5297449, z: 1}
   m_Children: []
   m_Father: {fileID: 338130041}
   m_RootOrder: 1
@@ -2033,7 +2033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746959344}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -6.55, y: 1.51, z: 0}
+  m_LocalPosition: {x: -5.37, y: 1.69, z: 0}
   m_LocalScale: {x: 12.835213, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 338130041}
@@ -10132,8 +10132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716355130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.563, y: 4.2, z: 0}
-  m_LocalScale: {x: 0.30581555, y: 0.47973543, z: 1}
+  m_LocalPosition: {x: 15.848, y: 4.069, z: 0}
+  m_LocalScale: {x: 0.70005053, y: 0.74255687, z: 1}
   m_Children: []
   m_Father: {fileID: 338130041}
   m_RootOrder: 7
@@ -11238,7 +11238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 0}
-  healthtext: {fileID: 0}
+  playerAnimation: {fileID: 0}
 --- !u!114 &1995670227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11253,7 +11253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   rb: {fileID: 1995670224}
-  healthtext: {fileID: 0}
+  playerAnimation: {fileID: 1995670223}
 --- !u!1 &2032218017
 GameObject:
   m_ObjectHideFlags: 0
