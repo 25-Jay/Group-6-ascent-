@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Outofbounds
   - Healthpacks
+  - GameWinConsole
   layers:
   - Default
   - TransparentFX

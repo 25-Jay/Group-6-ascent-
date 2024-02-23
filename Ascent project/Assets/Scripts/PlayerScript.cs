@@ -112,5 +112,10 @@ public class PlayerScript : MonoBehaviour
 
             //Health.healthpoints += 10;
         }
+
+        if (collision.transform.tag == "GameWinConsole")
+        {
+            SceneManager.LoadScene("WinScene");
+        }
     }
 }
