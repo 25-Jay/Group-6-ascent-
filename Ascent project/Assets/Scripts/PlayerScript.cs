@@ -117,5 +117,10 @@ public class PlayerScript : MonoBehaviour
         {
             SceneManager.LoadScene("WinScene");
         }
+
+        if (collision.transform.tag == "LevelProgressConsole")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
     }
 }
